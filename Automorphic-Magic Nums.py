@@ -15,11 +15,11 @@ If the single digit comes to be 1 then the number is a magic number.
 def Automorphic(number):
     square_num = number * number
     number_length = len(str(number))
-    last_digits = int(str(square_num)[-number_length:])
+    last_digits = (str(square_num)[-number_length:])
 
     if last_digits == number:
-        print(f'{number} squared is {square_num}\n'
-              f'This is an Automorphic number\n')
+        print(print(f'{number} squared is {square_num}\n'
+              f'This is an Automorphic number\n'))
 
 
     else:
@@ -39,7 +39,7 @@ def MagicNum(number):
         return False
 
     while (number != 0):
-        digit_sum += int(number % 10)
+        digit_sum += int(number / 10)
         number = int(number // 10)
 
     print(*digits, sep=' + ', end=' = ')
